@@ -22,4 +22,13 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
   bot.sendMessage(chatId, responseText);
 });
 
+// Handle /code command
+bot.onText(/\/code/, (msg) => {
+  const chatId = msg.chat.id;
+  const repoUrl = process.env.REPO_URL || 'Repository URL not found';
+  
+  bot.sendMessage(chatId, repoUrl);
+});
+
+
 console.log('Bot is running...');
