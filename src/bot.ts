@@ -8,7 +8,7 @@ dotenv.config();
 const token = process.env.TELEGRAM_API_TOKEN;
 
 if (!token) {
-  throw new Error('TELEGRAM_API_TOKEN is not defined in .env file');
+  throw new Error('No TELEGRAM_API_TOKEN in .env file');
 }
 
 // Create a bot instance
