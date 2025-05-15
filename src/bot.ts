@@ -25,9 +25,9 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 // Handle /code command
 bot.onText(/\/code/, (msg) => {
   const chatId = msg.chat.id;
-  const repoUrl = process.env.REPO_URL || 'Repository URL not found';
+  const REPO_URL = process.env.REPO_URL || "Repository URL not found";
   
-  bot.sendMessage(chatId, repoUrl);
+  bot.sendMessage(chatId, REPO_URL);
 });
 
 
